@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us — VisionSync IT</title>
+  <meta name="description" content="Learn about VisionSync IT — our story, team, values, and commitment to technology excellence in Jordan and the MENA region." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .values-grid{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;
+      margin-top:56px;
+    }
+    .value-card{
+      background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);
+      padding:36px 32px;position:relative;overflow:hidden;transition:var(--trans);
+    }
+    .value-card::after{
+      content:'';position:absolute;bottom:0;left:0;right:0;height:3px;
+      background:linear-gradient(90deg,var(--accent),var(--teal));
+      transform:scaleX(0);transform-origin:left;transition:transform 0.4s;
+    }
+    .value-card:hover{border-color:var(--border2);transform:translateY(-4px)}
+    .value-card:hover::after{transform:scaleX(1)}
+    .value-num{
+      font-family:var(--font-disp);font-size:4rem;font-weight:700;
+      line-height:1;color:var(--border2);margin-bottom:16px;
+      transition:var(--trans);
+    }
+    .value-card:hover .value-num{color:var(--accent)}
+    .timeline{position:relative;margin-top:56px}
+    .timeline::before{
+      content:'';position:absolute;left:24px;top:0;bottom:0;
+      width:1px;background:linear-gradient(to bottom,var(--border),var(--accent),var(--border));
+    }
+    .timeline-item{
+      padding:0 0 48px 64px;position:relative;
+    }
+    .timeline-dot{
+      position:absolute;left:16px;top:6px;
+      width:18px;height:18px;border-radius:50%;
+      background:var(--accent);border:3px solid var(--bg);
+      box-shadow:0 0 16px var(--accent-glow);
+    }
+    .timeline-year{
+      font-size:0.78rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;
+      color:var(--accent2);margin-bottom:8px;
+    }
+    .timeline-title{font-family:var(--font-disp);font-size:1.2rem;font-weight:600;margin-bottom:8px}
+    .timeline-desc{font-size:0.92rem;color:var(--text2);line-height:1.7}
+    .stat-row{
+      display:grid;grid-template-columns:repeat(4,1fr);gap:2px;
+      border:1px solid var(--border);border-radius:var(--radius-lg);
+      overflow:hidden;background:var(--border);margin-top:56px;
+    }
+    .stat-cell{
+      background:var(--surface);padding:32px 24px;text-align:center;
+      transition:var(--trans);
+    }
+    .stat-cell:hover{background:var(--surface2)}
+    .stat-cell-num{
+      font-family:var(--font-disp);font-size:2.8rem;font-weight:700;
+      background:linear-gradient(135deg,var(--accent2),var(--teal));
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+    }
+    .stat-cell-label{font-size:0.83rem;color:var(--text2);margin-top:6px}
+    @media(max-width:768px){
+      .stat-row{grid-template-columns:1fr 1fr}
+    }
+  </style>
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <!-- ── PAGE HERO ─────────────────────────────────────────── -->
+  <section class="page-hero">
+    <div class="page-hero__orb"></div>
+    <div class="container relative">
+      <div class="animate-on-scroll">
+        <span class="section-label">About VisionSync IT</span>
+        <h1 class="h1" style="max-width:640px">
+          Built by Engineers,<br><span class="gradient-text">Driven by Purpose</span>
+        </h1>
+        <p class="body-lg" style="max-width:540px;margin-top:20px">
+          We're a team of passionate technologists on a mission to bridge the gap between 
+          bold ideas and powerful digital realities — starting from Amman, reaching the world.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── OUR STORY ─────────────────────────────────────────── -->
+  <section style="padding:100px 0 80px">
+    <div class="container relative">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start" class="animate-on-scroll">
+        <div>
+          <span class="section-label">Our Story</span>
+          <h2 class="h2 section-title">From a Small Team<br><span class="gradient-text">to a Regional Force</span></h2>
+        </div>
+        <div>
+          <p class="body-lg" style="margin-bottom:24px">
+            VisionSync IT was founded with a simple belief: Jordanian businesses deserve access to 
+            world-class technology solutions without having to look abroad.
+          </p>
+          <p style="color:var(--text2);line-height:1.8;margin-bottom:24px">
+            Starting as a two-person freelance operation in 2020, we've grown into a full-service 
+            IT company with a dedicated team of developers, designers, and consultants. Our work 
+            spans e-commerce platforms, healthcare systems, fintech applications, and enterprise ERPs.
+          </p>
+          <p style="color:var(--text2);line-height:1.8">
+            Today, we serve clients across Jordan, Saudi Arabia, UAE, and beyond — but our roots 
+            and our heart remain in Amman.
+          </p>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="stat-row animate-on-scroll">
+        <div class="stat-cell">
+          <div class="stat-cell-num">50+</div>
+          <div class="stat-cell-label">Projects Delivered</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-cell-num">30+</div>
+          <div class="stat-cell-label">Happy Clients</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-cell-num">5</div>
+          <div class="stat-cell-label">Years in Business</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-cell-num">4+</div>
+          <div class="stat-cell-label">Countries Served</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── OUR VALUES ─────────────────────────────────────────── -->
+  <section id="values" style="padding:80px 0;background:var(--bg2)">
+    <div class="container relative">
+      <div class="animate-on-scroll" style="text-align:center">
+        <span class="section-label">What We Stand For</span>
+        <h2 class="h2 section-title">Our Core Values</h2>
+        <p class="section-desc" style="margin:0 auto 0">The principles that guide every project we take on.</p>
+      </div>
+      <div class="values-grid">
+        <div class="value-card animate-on-scroll">
+          <div class="value-num">01</div>
+          <h3 class="h4" style="margin-bottom:12px">Quality Without Compromise</h3>
+          <p class="small" style="line-height:1.7">We never ship work we're not proud of. Every pixel, every function, every query is reviewed, tested, and refined before it reaches your users.</p>
+        </div>
+        <div class="value-card animate-on-scroll">
+          <div class="value-num">02</div>
+          <h3 class="h4" style="margin-bottom:12px">Radical Transparency</h3>
+          <p class="small" style="line-height:1.7">No surprises. We communicate openly about timelines, costs, and trade-offs. You'll always know exactly where your project stands.</p>
+        </div>
+        <div class="value-card animate-on-scroll">
+          <div class="value-num">03</div>
+          <h3 class="h4" style="margin-bottom:12px">Client-First Thinking</h3>
+          <p class="small" style="line-height:1.7">We measure success by your success. We push back when we think you're making a mistake, and we celebrate when you grow.</p>
+        </div>
+        <div class="value-card animate-on-scroll">
+          <div class="value-num">04</div>
+          <h3 class="h4" style="margin-bottom:12px">Continuous Learning</h3>
+          <p class="small" style="line-height:1.7">Technology moves fast. Our team dedicates time each week to learning, experimenting, and bringing fresh ideas to our work.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TEAM ───────────────────────────────────────────────── -->
+  <section id="team" style="padding:100px 0">
+    <div class="container relative">
+      <div class="animate-on-scroll" style="text-align:center">
+        <span class="section-label">The Team</span>
+        <h2 class="h2 section-title">Meet the People<br><span class="gradient-text">Behind the Code</span></h2>
+        <p class="section-desc" style="margin:0 auto 0">Senior engineers, creative designers, and strategic thinkers — all working toward one goal.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card animate-on-scroll">
+          <div class="team-avatar">YA</div>
+          <div class="team-name">Yousef Al-Ahmad</div>
+          <div class="team-role">CEO & Lead Architect</div>
+          <p class="team-bio">10+ years in full-stack development. Passionate about scalable systems and clean code. Previously at Aramex and Zain Digital.</p>
+        </div>
+        <div class="team-card animate-on-scroll">
+          <div class="team-avatar">LK</div>
+          <div class="team-name">Lina Khalil</div>
+          <div class="team-role">Head of Design</div>
+          <p class="team-bio">UX/UI specialist with a background in human-computer interaction. Turns complex workflows into intuitive experiences.</p>
+        </div>
+        <div class="team-card animate-on-scroll">
+          <div class="team-avatar">OM</div>
+          <div class="team-name">Omar Mansour</div>
+          <div class="team-role">Backend Engineer</div>
+          <p class="team-bio">PHP and MySQL expert. Obsessed with performance optimization and database architecture. Writes code that lasts.</p>
+        </div>
+        <div class="team-card animate-on-scroll">
+          <div class="team-avatar">NA</div>
+          <div class="team-name">Nour Abboud</div>
+          <div class="team-role">DevOps & Cloud</div>
+          <p class="team-bio">AWS-certified. Keeps systems running 24/7 with zero-downtime deployments and bulletproof infrastructure setups.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TIMELINE ───────────────────────────────────────────── -->
+  <section style="padding:80px 0 120px;background:var(--bg2)">
+    <div class="container relative">
+      <div class="animate-on-scroll">
+        <span class="section-label">Our Journey</span>
+        <h2 class="h2 section-title">How We Got Here</h2>
+      </div>
+      <div style="max-width:640px;margin-top:0" class="animate-on-scroll">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2020</div>
+            <div class="timeline-title">Founded in Amman</div>
+            <p class="timeline-desc">Started as a two-person freelance team building websites for local businesses. Delivered 8 projects in our first year.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2021</div>
+            <div class="timeline-title">First Enterprise Client</div>
+            <p class="timeline-desc">Won our first enterprise contract — a full ERP system for a Jordanian logistics company. Grew the team to 6 people.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2022</div>
+            <div class="timeline-title">Regional Expansion</div>
+            <p class="timeline-desc">Expanded services to Saudi Arabia and UAE. Launched our cloud infrastructure practice. Team grew to 12 specialists.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2023</div>
+            <div class="timeline-title">AI & Automation Practice</div>
+            <p class="timeline-desc">Launched our AI division — delivering machine learning models and automation solutions for enterprise clients.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2025</div>
+            <div class="timeline-title">Now & Beyond</div>
+            <p class="timeline-desc">50+ projects delivered. Building the future of tech in the Arab world — one line of code at a time.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="container relative">
+      <div class="cta-banner__inner animate-on-scroll">
+        <h2 class="cta-banner__title">Want to Join<br><span class="gradient-text">Our Team?</span></h2>
+        <div class="cta-banner__actions">
+          <a href="contact.html" class="btn btn-primary btn-lg">Get in Touch →</a>
+          <a href="services.html" class="btn btn-secondary btn-lg">See Our Work</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
